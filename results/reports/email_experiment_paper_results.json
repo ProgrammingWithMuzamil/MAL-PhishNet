@@ -1,0 +1,69 @@
+{
+  "experiment_name": "Email Phishing Detection \u2014 Nazario + SpamAssassin",
+  "dataset": {
+    "phishing_source": "Nazario Phishing Email Corpus (Zenodo record 8339691)",
+    "legitimate_source": "SpamAssassin Public Corpus (easy_ham + hard_ham)",
+    "phishing_count_after_cleaning": 1564,
+    "legitimate_count_after_cleaning": 2720,
+    "total": 4284,
+    "split": {
+      "train": 2998,
+      "validation": 643,
+      "test": 643
+    }
+  },
+  "classifier": "Random Forest (identical hyperparameters for both feature groups; each feature group trained as an independent model \u2014 no single fused feature matrix exists in the current implementation)",
+  "results": {
+    "text": {
+      "sample_count": 643,
+      "threshold": 0.47291457286432165,
+      "accuracy": 0.9828926905132193,
+      "precision": 0.9704641350210971,
+      "recall": 0.9829059829059829,
+      "f1": 0.9766454352441614,
+      "specificity": 0.9828850855745721,
+      "confusion_matrix": [
+        [
+          402,
+          7
+        ],
+        [
+          4,
+          230
+        ]
+      ],
+      "mcc": 0.9631980123232127,
+      "roc_auc": 0.9985162894698347,
+      "pr_auc": 0.9976465265791352
+    },
+    "behavioral": {
+      "sample_count": 643,
+      "threshold": 0.502462311557789,
+      "accuracy": 0.9844479004665629,
+      "precision": 0.9745762711864406,
+      "recall": 0.9829059829059829,
+      "f1": 0.9787234042553191,
+      "specificity": 0.9853300733496333,
+      "confusion_matrix": [
+        [
+          403,
+          6
+        ],
+        [
+          4,
+          230
+        ]
+      ],
+      "mcc": 0.9664905854984566,
+      "roc_auc": 0.9981819321672624,
+      "pr_auc": 0.9964036474932265
+    }
+  },
+  "generated_at_utc": "2026-08-15T16:59:06.157139+00:00",
+  "source_evaluation_signature": "b924aa197ed7d8ffeab863b56e8f2ab1d4d1fafb971f816a91a5416194ced281",
+  "excluded_from_this_paper": [
+    "url",
+    "web_content",
+    "fusion"
+  ]
+}

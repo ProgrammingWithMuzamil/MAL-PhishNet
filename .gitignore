@@ -1,0 +1,27 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & model artifacts (usually too large for git)
+data/
+datasets/
+checkpoints/
+*.pt
+*.pth
+*.pkl
+
+# Logs
+*.log
+history.json
+last_status.json
+
+# Environment
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
